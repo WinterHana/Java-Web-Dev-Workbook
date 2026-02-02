@@ -53,6 +53,10 @@ dependencies {
 
     // Source: https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j2-impl
     implementation("org.apache.logging.log4j:log4j-slf4j2-impl:2.25.3")
+
+    // Source : https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api
+    implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0'
+    implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1'
 }
 
 test {
