@@ -94,7 +94,7 @@ public class TodoDAO {
 
     public void deleteOne(Long tno) throws Exception {
 
-        String sql = "delect from tbl_todo where tno = ?";
+        String sql = "delete from tbl_todo where tno = ?";
 
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
