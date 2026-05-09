@@ -7,6 +7,8 @@ import org.zerock.ch3.domain.MemberVO;
 import org.zerock.ch3.dto.MemberDTO;
 import org.zerock.ch3.util.MapperUtil;
 
+import java.lang.reflect.Member;
+
 @Log4j2
 public enum MemberService {
     INSTANCE;
@@ -21,6 +23,16 @@ public enum MemberService {
 
     public MemberDTO login(String mid, String mpw) throws Exception {
         MemberVO vo = dao.getWithPassword(mid, mpw);
+        MemberDTO memberDTO = modelMapper.map(vo, MemberDTO.class);
+        return memberDTO;
+    }
+
+    public void updateUuid(String mid, String uuid) throws Exception {
+        dao.updateUuid(mid, uuid);
+    }
+
+    public MemberDTO getByUUID(String uuid) throws Exception {
+        MemberVO vo = dao.selectUUID(uuid);
         MemberDTO memberDTO = modelMapper.map(vo, MemberDTO.class);
         return memberDTO;
     }
