@@ -33,5 +33,7 @@
     <servlet-mapping>
         <servlet-name>appServlet</servlet-name>
         <url-pattern>/</url-pattern>
-    </servlet-mapping>z
+    </servlet-mapping>
+
+
 </web-app>
